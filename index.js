@@ -5,7 +5,7 @@ var express      = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser   = require('body-parser'),
     session      = require('express-session'),
-    port         = process.env.PORT || 3000
+    port         = process.env.PORT || 5000
 
 // load env variable from .env file
 require('dotenv').config()
@@ -14,14 +14,14 @@ require('dotenv').config()
 var app = express()
 
 // set up public directory path and favicon
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(express.static('public'))
 
 
 // load general middleware
 app.use(morgan('dev'))
 app.use(cookieParser())
-app.use(bodyParser())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // set up routes
 // var routes = require('./config/routes')
