@@ -23,7 +23,15 @@ module.exports = {
     root: __dirname,
     alias: {
       Main: 'app/components/Main.jsx',
-      miseAPI: 'app/api/mise_api.jsx'
+      Welcome: 'app/components/Welcome.jsx',
+      About: 'app/components/About.jsx',
+      Help: 'app/components/Help.jsx',
+      LogIn: 'app/components/LogIn.jsx',
+      SignUp: 'app/components/SignUp.jsx',
+
+      miseAPI: 'app/api/mise_api.jsx',
+
+      applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['','.js','.jsx']
   },

@@ -1,9 +1,12 @@
-var React = require('react')
+var React = require('react'),
+	{Link} = require('react-router')
 
 var Main = (props) => {
 	return (
 		<div>
-			<p>Hello Mise User</p>
+			<div id='indicator'><Link to='/'>mise</Link></div>
+
+			{props.children}
 		</div>
 	)	
 }

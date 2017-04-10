@@ -7,7 +7,7 @@ function index() {
 		.then(function(res) {
 	 		return res
 		 }, function(res) {
-		 	throw new Error(res)
+		 	throw new Error('Could not complete request')
 		 })
 }
 
