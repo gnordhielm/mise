@@ -16,7 +16,7 @@ var Welcome = (props) => {
 			<Link to='/about' className="top">About</Link>
 			<Link to='/sign-up' className="left">Sign Up</Link>
 			<Link to='/log-in' className="right">Log In</Link>
-			<Link to='/help' className="bottom">Help</Link>
+			<Link to='/help' className="bottom">Demo</Link>
 		</div>
 	)	
 }
