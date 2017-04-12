@@ -1,5 +1,7 @@
 var webpack = require('webpack')
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
@@ -13,8 +15,13 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
     })
-  ],  
+  ],   
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -49,5 +56,5 @@ module.exports = {
       }
     ]
   },
-  devtool: 'eval-source-map'
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'eval-source-map'
 }
