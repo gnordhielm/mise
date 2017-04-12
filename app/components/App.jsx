@@ -7,10 +7,16 @@ import {Link} from 'react-router'
 
 
 export var App = React.createClass({
+	onLogout: function(evt) {
+		var {dispatch} = this.props
+		evt.preventDefault()
+
+		dispatch(actions.startLogout())
+	},
 	render: function() {
 		return (
 		<div>
-			<h1 id='top-logo'><Link to='/'>Mise</Link></h1>
+			<div id='top-logo'><Link to='/'>Mise</Link><p onClick={this.onLogout} className="log-out" >log out</p></div>
 			{this.props.children}
 		</div>
 	)

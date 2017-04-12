@@ -34,7 +34,7 @@ export var startIndexRecipes = (recipes) => {
 // 	}
 // }
 
-// auth 0
+///// auth 0
 
 export const requestLogin = (credentials) => {
 	return {
@@ -63,6 +63,42 @@ export const loginError = (message) => {
 	}
 }
 
+// call api to get a token
+
+export const loginUser = (credentials) => {
+	let loginData = {
+		method: 'POST',
+		headers: {'Content-Type':'application/x-www-form-urlencoded' },
+		body: `email=${credentials.email}&password=${credentials.password}`
+	}
+
+	return (dispatch, getState) => {
+
+		// start login request
+		dispatch(requestLogin(credentials))
+
+		return $.post('https://mise-api.herokuapp.com/internal/recipes', loginData, (response) => {
+			recipes = response
+			dispatch(indexRecipes(recipes))
+		})
+
+		todosRef.once('value').then((data) => {
+			var todos = data.val() || {}
+			var parsedTodos = []
+
+			Object.keys(todos).forEach((todoId) => {
+				parsedTodos.push({
+					id: todoId,
+					...todos[todoId]
+				})
+			})
+			dispatch(addTodos(parsedTodos))
+		})
+	}
+
+
+
+}
 
 
 /////

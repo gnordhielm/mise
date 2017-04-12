@@ -12,7 +12,7 @@ export var Signup = React.createClass({
 	},
 	render: function() {
 		return (
-			<form>
+			<form onSubmit={this.onSignup}>
 				<h3>Sign Up</h3>
 
 				<div>
@@ -43,7 +43,7 @@ export var Signup = React.createClass({
 					<input type='password'></input>
 				</div>
 
-				<input onClick={this.onSignup} type='submit'/>
+				<input type='submit'/>
 				
 			</form>
 		)

@@ -3,9 +3,18 @@
 	text-align: center;
 	background-color: #777;
 	margin: 0;
+	padding: 10px 10px;
+	font-size: 25px;
 
-	a{
+	a, .log-out{
 		text-decoration: none;
 		color: white;
+	}
+
+	.log-out {
+		float: right;
+		font-size: 15px;
+		margin: 0;
+		cursor: pointer;
 	}
 }

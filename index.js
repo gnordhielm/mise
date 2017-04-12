@@ -28,8 +28,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // app.use('/api/', routes)
 
 
-
-
 // listen on port variable
 app.listen(port, function(){
 	var msg = `Server listening on port ${port}.`
