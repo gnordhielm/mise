@@ -1,6 +1,6 @@
 {
-  "name": "mise",
-  "version": "0.1.0",
+  "name": "Mise",
+  "version": "1.0.0",
   "description": "An application for managing cooking projects.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/gnordhielm/mise/issues"
   },
-  "homepage": "https://github.com/gnordhielm/mise#readme",
+  "homepage": "https://github.com/gnordhielm/mise",
   "dependencies": {
     "express": "^4.15.2",
     "css-loader": "^0.23.1",
