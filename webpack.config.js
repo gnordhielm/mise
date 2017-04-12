@@ -1,4 +1,5 @@
 var webpack = require('webpack')
+var path = require('path')
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
@@ -17,11 +18,12 @@ module.exports = {
       'jQuery': 'jquery'
     }),
     new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
       compressor: {
         warnings: false
       }
     })
-  ],   
+  ],  
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -56,5 +58,5 @@ module.exports = {
       }
     ]
   },
-  devtool: process.env.NODE_ENV === 'production' ? undefined : 'eval-source-map'
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'source-map'
 }
