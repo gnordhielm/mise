@@ -16,3 +16,21 @@ export var startIndexRecipes = (recipes) => {
 		})
 	}
 }
+
+export var startSignup = () => {
+	return (dispatch, getState) => {
+		console.log('starting sign up')
+	}
+}
+
+export var startLogin = () => {
+	return (dispatch, getState) => {
+		console.log('starting log in')
+	}
+}
+
+export var startLogout = () => {
+	return (dispatch, getState) => {
+		console.log('starting log out')
+	}
+}

@@ -1,7 +1,16 @@
-var React = require('react')
 
+import React from 'react'
+import * as Redux from 'react-redux'
 
-var LogIn = React.createClass({
+import * as actions from 'actions'
+
+export var Login = React.createClass({
+	onLogin: function(evt) {
+		var {dispatch} = this.props
+		evt.preventDefault()
+
+		dispatch(actions.startLogin())
+	},
 	render: function() {
 		return (
 			<form>
@@ -15,11 +24,11 @@ var LogIn = React.createClass({
 					<input type='password'></input>
 				</div>
 
-				<input type='submit' value='Log In'/>
+				<input onClick={this.onLogin} type='submit' value='Log In'/>
 
 			</form>
 		)
 	}
 })
 
-module.exports = LogIn
+export default Redux.connect()(Login)

@@ -6,7 +6,7 @@ var Dashboard = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<h3>Dashboard</h3>
+				<h1>Dashboard</h1>
 				<RecipeList/>
 			</div>
 		)

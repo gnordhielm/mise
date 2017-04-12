@@ -1,7 +1,7 @@
 var React = require('react')
 var {connect} = require('react-redux')
 
-import Recipe from 'Recipe'
+import RecipeSummary from 'RecipeSummary'
 
 export var RecipeList = React.createClass({
 	render: function() {
@@ -13,7 +13,7 @@ export var RecipeList = React.createClass({
 			} else {
 				return recipes.slice().map((recipe) => {
 					return (
-						<Recipe key={recipe._id} {...recipe}/>
+						<RecipeSummary key={recipe._id} {...recipe}/>
 					)
 				})
 			}
