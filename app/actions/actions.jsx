@@ -1,4 +1,3 @@
-import $ from 'jQuery'
 
 export var indexRecipes = (recipes) => {
 	return {
