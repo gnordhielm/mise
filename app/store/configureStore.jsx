@@ -1,11 +1,12 @@
 import * as redux from 'redux'
 import thunk from 'redux-thunk'
 
-import {recipesReducer} from 'reducers'
+import {recipesReducer, authReducer} from 'reducers'
 
 export var configure = (initialState = {}) => {
 	var reducer = redux.combineReducers({
-		recipes: recipesReducer
+		recipes: recipesReducer,
+		auth: authReducer
 	})
 
 	// configure browser dev tools
