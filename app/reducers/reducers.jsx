@@ -17,10 +17,12 @@ export var recipesReducer = (state = [], action) => {
 
 export var authReducer = (state = {}, action) => {
 	switch (action.type) {
+		case 'FAILED_SIGNUP':
+			return { ...state, signupErrors: {...action.errors} }
 		case 'LOGIN':
-			return {
-				id: action.id
-			}
+			return { status: "logged in" }
+		case 'FAILED_LOGIN':
+			return { ...state, loginErrors: {...action.errors} }
 		case 'LOGOUT':
 			return {}
 		default:

@@ -16,7 +16,14 @@ export var App = React.createClass({
 	render: function() {
 		return (
 		<div>
-			<div id='top-logo'><Link to='/'>Mise</Link><p onClick={this.onLogout} className="log-out" >log out</p></div>
+			<Link to='/'>Mise</Link>
+			<p onClick={this.onLogout} className="log-out" >log out</p>
+			<hr/>
+			<p>Lorem ipsum dolor</p>
+			<hr/>
+			<p className='font-test'>Lorem ipsum dolor</p>
+			<hr/>
+			
 			{this.props.children}
 		</div>
 	)

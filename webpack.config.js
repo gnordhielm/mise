@@ -30,6 +30,11 @@ module.exports = {
         warnings: false
       }
     }),
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    //   }
+    // })
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     })
@@ -65,6 +70,11 @@ module.exports = {
         test: /\.jsx?$/,
         // UNLESS they're in either of these folders
         exclude: /(node_modules|bower_components)/
+      },
+      // load fonts
+      {
+          test   : /\.woff?$/,
+          loader : 'file-loader'
       }
     ]
   },

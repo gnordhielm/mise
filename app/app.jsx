@@ -5,15 +5,8 @@ var React = require('react'),
 var {Provider} = require('react-redux')
 var actions = require('actions')
 var store = require('configureStore').configure()
-	
 
 import routes from 'app/routes/'
-
-// Subscribe to state updates
-store.subscribe(() => {
-	var state = store.getState()
-	console.log('New state', state)
-})
 
 // auth redirects
 

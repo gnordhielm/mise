@@ -3,7 +3,7 @@ import React from 'react'
 import {Route, Router, IndexRoute, hashHistory} from 'react-router'
 
 import App from 'App'
-import SignUp from 'SignUp'
+import Signup from 'Signup'
 import Login from 'Login'
 import Dashboard from 'Dashboard'
 
@@ -34,7 +34,7 @@ export default (<Router history={hashHistory}>
 		<IndexRoute component={Welcome}/>
 		<Route path='about' component={About}></Route>
 		<Route path='help' component={Help}></Route>
-		<Route path='sign-up' component={SignUp}></Route>
+		<Route path='sign-up' component={Signup}></Route>
 		<Route path='log-in' component={Login}></Route>
 	</Route>
 	 

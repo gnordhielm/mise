@@ -1,10 +1,37 @@
 
+// Fonts
+
+@font-face {
+  font-family: 'Charter Roman';
+    url:('./fonts/Charter-Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Charter Black';
+    url:('./fonts/Charter-Black.woff') format('woff');
+}
+
+$test-font: 'Charter Roman';
+$test-font2: 'Charter Black';
+
 // Color scheme
+
+$offwhite: #f3f1ed;
+$offblack: #42403a;
 
 $orange-neutral: #f1d098;
 $orange: #f09f5e;
 $blue-neutral: #d9d1bb;
 $blue: #698c8c;
+
+// Global colors
+$background-color: $offwhite;
+
+$chef-border-color: $blue-neutral;
+$ideas-border-color: $orange-neutral;
+$recipes-border-color: $orange;
+$projects-border-color: $blue;
+$help-border-color: $offblack;
 
 // Navigation colors
 
