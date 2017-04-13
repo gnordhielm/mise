@@ -25,18 +25,15 @@ module.exports = {
       'jQuery': 'jquery'
     }),
     new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
+      // minimize: true,
       compressor: {
         warnings: false
       }
     }),
-    // new webpack.DefinePlugin({
-    //   'process.env': {
-    //     NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-    //   }
-    // })
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      }
     })
   ],  
   output: {
@@ -73,8 +70,13 @@ module.exports = {
       },
       // load fonts
       {
-          test   : /\.woff?$/,
-          loader : 'file-loader'
+        test: /\.(ttf|woff|woff2)$/,
+        loader: 'file?name=fonts/[name].[ext]'
+      },
+      // load images
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        loader: 'url-loader'
       }
     ]
   },

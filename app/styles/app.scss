@@ -1,3 +1,4 @@
+@import 'fonts';
 @import 'base/variables';
 
 @import 'components/app';
@@ -39,6 +40,6 @@ p {
 }
 
 p.font-test {
-	font-family: $test-font2;
+	font-family: $charter-bold-1-italic;
 }
 

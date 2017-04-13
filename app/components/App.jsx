@@ -23,7 +23,11 @@ export var App = React.createClass({
 			<hr/>
 			<p className='font-test'>Lorem ipsum dolor</p>
 			<hr/>
-			
+			<a href='/fonts/Charter-Black.woff'> fonts</a>
+			<hr/>
+
+			<img src="/images/logo.png"/>
+
 			{this.props.children}
 		</div>
 	)

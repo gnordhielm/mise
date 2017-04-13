@@ -1,18 +1,14 @@
 
-// Fonts
+// Typography
 
-@font-face {
-  font-family: 'Charter Roman';
-    url:('./fonts/Charter-Roman.woff') format('woff');
-}
+$charter:'Charter Roman';
+$charter-italic:'Charter Italic';
 
-@font-face {
-  font-family: 'Charter Black';
-    url:('./fonts/Charter-Black.woff') format('woff');
-}
+$charter-bold-1:'Charter Bold';
+$charter-bold-1-italic:'Charter Bold Italic';
 
-$test-font: 'Charter Roman';
-$test-font2: 'Charter Black';
+$charter-bold-2:'Charter Black';
+$charter-bold-2-italic:'Charter Black Italic';
 
 // Color scheme
 

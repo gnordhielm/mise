@@ -1,11 +1,11 @@
-var express      = require('express'),
-    path         = require('path'),
-    favicon      = require('serve-favicon'),
-    morgan       = require('morgan'),
-    cookieParser = require('cookie-parser'),
-    bodyParser   = require('body-parser'),
-    session      = require('express-session'),
-    port         = process.env.PORT || 5000
+var express = require('express')
+var path = require('path')
+var favicon = require('serve-favicon')
+var morgan = require('morgan')
+var cookieParser = require('cookie-parser')
+var bodyParser = require('body-parser')
+var session = require('express-session')
+var port = process.env.PORT || 5000
 
 // load env variable from .env file
 require('dotenv').config()
