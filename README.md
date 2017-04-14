@@ -83,7 +83,13 @@ If this app grows to the point where it needs a more rigid and serious back-end,
 ...
 
 ## Installation
-...
+
+This is a React/Node app. You'll need Node to get started.
+
+Navigate to the root.
+Run `npm install`.
+Run node start - this will bundle the files using webpack and start the server.
+
 
 ## Next Steps
 

@@ -1,12 +1,27 @@
-var React = require('react')
+import React from 'react'
+import * as Redux from 'react-redux'
+
+import * as actions from 'actions'
+import {Link, IndexLink} from 'react-router'
 
 
-var About = React.createClass({
+export var About = React.createClass({
 	render: function() {
 		return (
-			<h3>Hello from the About component.</h3>
-		)
-	}
+		<div className="skinny-center-div about">
+			<Link className="navigation-link" to='/'>Home</Link>
+			<br/>
+			<br/>
+
+			<h1>About Mise</h1>
+			<br/>
+			
+			<IndexLink activeClassName="help-text" className="navigation-link" to='about'>The App</IndexLink>
+			<Link activeClassName="help-text" className="navigation-link"to='about/api'>API</Link>
+			{this.props.children}
+		</div>
+	)
+}
 })
 
-module.exports = About
+export default Redux.connect()(About)

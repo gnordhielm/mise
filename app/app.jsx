@@ -6,7 +6,7 @@ var {Provider} = require('react-redux')
 var actions = require('actions')
 var store = require('configureStore').configure()
 
-import routes from 'app/routes/'
+import routes from 'app/routes/routes.jsx'
 
 // auth redirects
 
@@ -21,11 +21,12 @@ import routes from 'app/routes/'
 // 	}
 // })
 
-store.dispatch(actions.startIndexRecipes())
+// store.dispatch(actions.startIndexRecipes())
 
 // load app css
 require('style!css!sass!applicationStyles')
 
+// render the application with the store, router
 ReactDOM.render(
 	<Provider store={store}>
 		{routes}

@@ -15,26 +15,31 @@ export var Login = React.createClass({
 			password: this.refs.password.value
 		}
 
+		console.log(credentials)
+
 		dispatch(actions.startLogin(credentials))
 	},
 	render: function() {
 		return (
-			<form>
-				<div>
-					<label>Email:</label>
-					<input type='text' ref='email'></input>
-				</div>
+			<div className="login-form">
+				<Link className="menu-link chef-text" to='/'>Menu</Link>
+				<form>
+					<h3>Log In</h3>
 
-				<div>
-					<label>Password:</label>
-					<input type='password' ref='password'></input>
-				</div>
+					<div>
+						<input type='text' ref='email' placeholder='email' autofill='off'></input>
+					</div>
 
-				<input onClick={this.onLogin} type='submit' value='Log In'/>
+					<div>
+						<input type='password' ref='password' placeholder='password' autofill='off'></input>
+					</div>
+					<br/>
+					<br/>
 
-				<p>Don't have an account? <Link to='/sign-up'>Sign up</Link>!</p>
+					<input onClick={this.onLogin} type='submit' value='Log In'/>
 
-			</form>
+				</form>
+			</div>
 		)
 	}
 })

@@ -12,8 +12,9 @@ $charter-bold-2-italic:'Charter Black Italic';
 
 // Color scheme
 
-$offwhite: #f3f1ed;
-$offblack: #42403a;
+$off-white: #f3f1ed;
+$off-black: #42403a;
+$off-grey: #d9d1bb;
 
 $orange-neutral: #f1d098;
 $orange: #f09f5e;
@@ -21,13 +22,21 @@ $blue-neutral: #d9d1bb;
 $blue: #698c8c;
 
 // Global colors
-$background-color: $offwhite;
+$background-color: $off-white;
 
 $chef-border-color: $blue-neutral;
 $ideas-border-color: $orange-neutral;
 $recipes-border-color: $orange;
 $projects-border-color: $blue;
-$help-border-color: $offblack;
+$help-border-color: $off-black;
+
+$default-text-color: $off-black;
+$default-font: $charter;
+
+// Form Colors
+$button-color: $off-black;
+$button-hover-color: $blue-neutral;
+$button-text-color: $off-white;
 
 // Navigation colors
 

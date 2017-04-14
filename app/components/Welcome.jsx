@@ -1,24 +1,24 @@
-var React = require('react'),
-	{Link} = require('react-router')
+import React from 'react'
+import * as Redux from 'react-redux'
+
+import * as actions from 'actions'
+import {Link} from 'react-router'
 
 
-// var Welcome = React.createClass({
-// 	render: function() {
-// 		return (
-// 			<h3>Hello from the Welcome component.</h3>
-// 		)
-// 	}
-// })
+export var Welcome = React.createClass({
+	render: function() {
+		return (
+			<div className="skinny-center-div welcome">
+				<div className="logo-block">
+					<img src='/images/logo.svg' alt='Mise logo'/>
+					<h1>Mise</h1>
+				</div>
 
-var Welcome = (props) => {
-	return (
-		<div id="welcome-navigation">
-			<Link to='/about' className="top">About</Link>
-			<Link to='/sign-up' className="left">Sign Up</Link>
-			<Link to='/log-in' className="right">Log In</Link>
-			<Link to='/help' className="bottom">Demo</Link>
-		</div>
-	)	
-}
+				{this.props.children}
+			
+			</div>
+		)
+	}
+})
 
-module.exports = Welcome
+export default Redux.connect()(Welcome)

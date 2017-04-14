@@ -1,45 +1,12 @@
 @import 'fonts';
 @import 'base/variables';
+@import 'base/normalize';
+
+@import 'components/welcome';
+@import 'components/welcome-menu';
+@import 'components/signup';
+@import 'components/login';
+
+@import 'components/about';
 
 @import 'components/app';
-@import 'components/welcome';
-
-body, html, #app {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	overflow: hidden;
-	box-sizing: border-box;
-}
-
-#app {
-	background-color: $background-color;
-	border: 7px solid $help-border-color;
-
-	&.chef {
-		border-color: $chef-border-color;
-	}
-	&.ideas {
-		border-color: $ideas-border-color;
-	}
-	&.recipes {
-		border-color: $recipes-border-color;
-	}
-	&.projects {
-		border-color: $projects-border-color;
-	}
-	&.help {
-		border-color: $help-border-color;
-	}
-	
-}
-
-p {
-	font-size: 20px;
-}
-
-p.font-test {
-	font-family: $charter-bold-1-italic;
-}
-

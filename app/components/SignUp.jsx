@@ -1,5 +1,6 @@
 import React from 'react'
 import * as Redux from 'react-redux'
+import {Link} from 'react-router'
 
 import * as actions from 'actions'
 
@@ -20,6 +21,8 @@ export var Signup = React.createClass({
 	},
 	render: function() {
 		return (
+			<div className='signup-form'>
+			<Link className="menu-link chef-text" to='/'>Menu</Link>
 			<form onSubmit={this.onSignup}>
 				<h3>Sign Up</h3>
 
@@ -56,9 +59,12 @@ export var Signup = React.createClass({
 					<input type='password' ref='password'></input>
 				</div>
 
+				<br/>
+
 				<input type='submit'/>
 				
 			</form>
+			</div>
 		)
 	}
 })

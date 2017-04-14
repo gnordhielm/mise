@@ -23,10 +23,11 @@ app.use(morgan('dev'))
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// set up routes
-// var routes = require('./config/routes')
-// app.use('/api/', routes)
-
+// set up routes - always send index when there is no other match...
+// React handles my routing.
+// app.get('/*', (req,res) => {
+// 	res.sendFile(path.join(__dirname, '/public/index.html'))
+// })
 
 // listen on port variable
 app.listen(port, function(){

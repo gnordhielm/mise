@@ -13,25 +13,19 @@ export var App = React.createClass({
 
 		dispatch(actions.startLogout())
 	},
+	getWrapperClass: function() {
+		var result = ''
+		
+		console.log('getting wrapper class', result)
+		return result
+	},
 	render: function() {
 		return (
-		<div>
-			<Link to='/'>Mise</Link>
-			<p onClick={this.onLogout} className="log-out" >log out</p>
-			<hr/>
-			<p>Lorem ipsum dolor</p>
-			<hr/>
-			<p className='font-test'>Lorem ipsum dolor</p>
-			<hr/>
-			<a href='/fonts/Charter-Black.woff'> fonts</a>
-			<hr/>
-
-			<img src="/images/logo.png"/>
-
+		<div id="app-wrapper" className={this.getWrapperClass()}>
 			{this.props.children}
 		</div>
 	)
-	}
+}
 })
 
 export default Redux.connect()(App)
