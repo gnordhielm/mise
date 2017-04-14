@@ -1,5 +1,5 @@
 
-const URL = 'http://localhost:3000'
+const URL = 'https://mise-api.herokuapp.com/'
 
 ///// Recipe actions
 
