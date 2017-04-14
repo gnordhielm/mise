@@ -16,7 +16,6 @@ export var App = React.createClass({
 	getWrapperClass: function() {
 		var result = ''
 		
-		console.log('getting wrapper class', result)
 		return result
 	},
 	render: function() {

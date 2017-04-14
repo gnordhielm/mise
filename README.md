@@ -94,7 +94,8 @@ Run node start - this will bundle the files using webpack and start the server.
 ## Next Steps
 
 **Things I need to fix**
-...
+
+* I need to learn more about XHR and how to set headers with bearers. I'm using a few too many post requests in my internal API and I imagine there's a better way...
 
 **Features I'd like to implement**
 ...

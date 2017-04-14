@@ -25,9 +25,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // set up routes - always send index when there is no other match...
 // React handles my routing.
-// app.get('/*', (req,res) => {
-// 	res.sendFile(path.join(__dirname, '/public/index.html'))
-// })
+app.get('*', (req,res) => {
+	res.sendFile(path.join(__dirname, '/public/index.html'))
+})
 
 // listen on port variable
 app.listen(port, function(){

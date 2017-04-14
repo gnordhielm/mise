@@ -10,13 +10,25 @@ export var indexRecipes = (recipes) => {
 	}
 }
 
-export var startIndexRecipes = (recipes) => { 
+export var startIndexRecipes = () => { 
 	return (dispatch, getState) => {
-		var recipes
 
 		$.get(URL + '/recipes', (response) => {
-			recipes = response
+			var recipes = response
 			dispatch(indexRecipes(recipes))
+		})
+	}
+}
+
+export var startAddRecipe = (newRecipe, token) => { 
+	return (dispatch, getState) => {
+
+		$.post(URL + '/internal/new-recipe', {token: token, newRecipe: newRecipe}, (response) => {
+
+			if (response.error) console.log(response.error)
+
+			console.log(response)
+			dispatch(startIndexRecipes())
 		})
 	}
 }
@@ -42,7 +54,7 @@ export var startSignup = (newUser) => {
 						dispatch(failedLogin(finalResponse.error))
 					}
 				})
-				
+
 			} else {
 				// the credentials were not accepted
 				dispatch(failedSignup(response.errors))

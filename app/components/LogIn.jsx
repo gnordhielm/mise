@@ -15,12 +15,11 @@ export var Login = React.createClass({
 			password: this.refs.password.value
 		}
 
-		console.log(credentials)
-
 		dispatch(actions.startLogin(credentials))
 	},
 	render: function() {
 		return (
+			
 			<div className="login-form">
 				<Link className="menu-link chef-text" to='/'>Menu</Link>
 				<form>
@@ -45,3 +44,6 @@ export var Login = React.createClass({
 })
 
 export default Redux.connect()(Login)
+
+
+
