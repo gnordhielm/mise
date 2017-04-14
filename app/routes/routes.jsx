@@ -19,7 +19,7 @@ import Dashboard from 'Dashboard'
 
 // Auth middleware
 var requireLogin = (nextState, replace, next) => {
-	replace('/')
+	if (true) replace('/')
 	next()
 }
 
@@ -45,7 +45,16 @@ export default (
 			<Route path='api' component={AboutAPI}/>
 		</Route>
 
-		<Route path='/dashboard' component={Dashboard} onEnter={requireLogin}>
+		<Route path='/ideas' component={Dashboard} onEnter={requireLogin}>
+		</Route>
+
+		<Route path='/projects' component={Dashboard} onEnter={requireLogin}>
+		</Route>
+
+		<Route path='/recipes' component={Dashboard} onEnter={requireLogin}>
+		</Route>
+
+		<Route path='/chef' component={Dashboard} onEnter={requireLogin}>
 		</Route>
 
 	</Route>
